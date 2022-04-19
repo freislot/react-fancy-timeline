@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './styles.module.css';
+import './styles.module.css';
 
 import { Timeline } from 'react-fancy-timeline'
 import 'react-fancy-timeline/dist/index.css'
