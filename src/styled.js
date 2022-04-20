@@ -76,7 +76,7 @@ export const TimelineItem = styled.div.attrs(props => ({
   background: ${props => hexToRGB({ hex: props?.item?.color, alpha: 0.5 })};
   color: ${props => props?.item?.color};
   width: ${props => monthCssWidth * props?.item?.monthLength}px;
-  top: ${props => (itemCssHeight + itemCssMarginBottom) * props?.item?.order}px;
+  top: ${props => (itemCssHeight + itemCssMarginBottom) * Number(props?.item?.order)}px;
   left: ${props => props?.item?.startMonth / 12 * 100}%;
 
   ${TimelineItemTag}{
