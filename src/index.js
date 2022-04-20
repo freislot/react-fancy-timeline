@@ -41,7 +41,7 @@ export const Timeline = ({ data = [], lightTheme = false }) => {
           endDate: { year: Number(x?.endDate.split('.').at(1)), month: Number(x?.endDate.split('.').at(0)) }
         }),
         startMonth: Number(x?.startDate.split('.').at(0)),
-        order: x?.order || data?.indexOf(x)
+        order: x?.order || (data?.indexOf(x) + 1)
       }));
     // записываем в массив с годами
     yearsArray.push({
