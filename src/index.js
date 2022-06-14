@@ -7,7 +7,8 @@ import {
   YearInnerWrapper,
   YearVerticalLine,
   TimelineItem,
-  TimelineItemTag
+  TimelineItemTag,
+  TimelineStickyContent
 } from './styled';
 
 export const Timeline = ({ data = [], lightTheme = false }) => {
@@ -58,8 +59,10 @@ export const Timeline = ({ data = [], lightTheme = false }) => {
             <YearVerticalLine />
             {x?.items?.map(y =>
               <TimelineItem key={y?.title} item={y}>
-                <TimelineItemTag />
-                {y?.title}
+                <TimelineStickyContent>
+                  <TimelineItemTag />
+                  {y?.title}
+                </TimelineStickyContent>
               </TimelineItem>
             )}
           </YearInnerWrapper>

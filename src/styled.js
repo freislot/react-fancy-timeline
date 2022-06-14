@@ -36,14 +36,14 @@ export const TimelineWrapper = styled.div.attrs(props => ({
   padding-left: 20px;
   
   ${YearLabel}{
-    color: ${props => props?.lightTheme ? 
+    color: ${props => props?.lightTheme ?
       'rgba(0, 0, 0, 0.3)' :
       'rgba(255, 255, 255, 0.3)'
     };
   };
   ${YearVerticalLine}{
     height: ${props => (itemCssHeight + itemCssMarginBottom) * props?.itemsCount}px;
-    background: ${props => props?.lightTheme ? 
+    background: ${props => props?.lightTheme ?
       'rgba(0, 0, 0, 0.3)' :
       'rgba(255, 255, 255, 0.3)'
     };
@@ -63,8 +63,6 @@ export const TimelineItem = styled.div.attrs(props => ({
     color: props?.item?.color || '#ffffff'
   }
 }))`
-  display: flex;
-  align-items: center;
   box-sizing: border-box;
   position: absolute;
   z-index: 1;
@@ -78,8 +76,18 @@ export const TimelineItem = styled.div.attrs(props => ({
   width: ${props => monthCssWidth * props?.item?.monthLength}px;
   top: ${props => (itemCssHeight + itemCssMarginBottom) * (props?.item?.order - 1)}px;
   left: ${props => props?.item?.startMonth / 12 * 100}%;
+  padding-right: 20px;
 
   ${TimelineItemTag}{
     background: ${props => props?.item?.color};
   }
 `;
+
+export const TimelineStickyContent = styled.div`
+  height: 100%;
+  position: sticky;
+  left: -20px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+`
