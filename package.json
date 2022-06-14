@@ -1,7 +1,14 @@
 {
   "name": "react-fancy-timeline",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple timeline react component",
+  "keywords": [
+    "react",
+    "timeline",
+    "component",
+    "ui",
+    "fancy-timeline"
+  ],
   "author": "freislot",
   "license": "MIT",
   "repository": "freislot/react-fancy-timeline",
