@@ -68,3 +68,8 @@ export const Timeline = ({ data = [], lightTheme = false }) => {
     </TimelineWrapper>
   );
 };
+
+/** TODO
+ * фиксировать названия элементов при скролле
+ * babel
+ */
